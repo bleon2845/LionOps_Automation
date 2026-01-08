@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>656</width>
+    <height>509</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QStackedWidget" name="Pages">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="page_createorders">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="CreateOrders">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <italic>true</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>CREATE ORDERS</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="Login">
+               <property name="text">
+                <string>Login</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="user_create">
+               <property name="placeholderText">
+                <string>User</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="pass_create">
+               <property name="placeholderText">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_login_create">
+               <property name="text">
+                <string>Login</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QPushButton" name="btn_open">
+               <property name="text">
+                <string>Select File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="txt_filecreation">
+               <property name="placeholderText">
+                <string>Select Excel File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_creation">
+               <property name="text">
+                <string>Create Orders</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_close">
+               <property name="text">
+                <string>Close SAP</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tb_creation">
+             <column>
+              <property name="text">
+               <string>INDICE</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>PEDIDO</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>ENTREGA</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>PROYECTO</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>MATERIAL</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>CANTIDAD</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>FECHA</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>CENTRO</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>ALM.DEST</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>LOTE</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>OT</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>GUARDAR</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_savepdf">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="SavePDF">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <italic>true</italic>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>SAVE PDF</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>Login</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="user_save">
+               <property name="placeholderText">
+                <string>User</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="pass_save">
+               <property name="placeholderText">
+                <string>Password</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_login_save">
+               <property name="text">
+                <string>Login</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QPushButton" name="btn_openprint">
+               <property name="text">
+                <string>Select File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="txt_fileprint">
+               <property name="placeholderText">
+                <string>Select Excel File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_print">
+               <property name="text">
+                <string>Save PDF</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QPushButton" name="btn_opendoc">
+               <property name="text">
+                <string>Select File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="txt_filedoc">
+               <property name="placeholderText">
+                <string>Select Excel File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_printdoc">
+               <property name="text">
+                <string>Create Doc</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tableWidget_2">
+             <column>
+              <property name="text">
+               <string>DOCUMENTO</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>ENTREGA</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>656</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>MENU</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>icons/categories.png</normaloff>icons/categories.png</iconset>
+    </property>
+    <addaction name="actionOPERATION"/>
+    <addaction name="actionAUTOMATION"/>
+    <addaction name="actionREPORTS"/>
+   </widget>
+   <widget class="QMenu" name="menuOperation">
+    <property name="title">
+     <string>OPERATION</string>
+    </property>
+    <widget class="QMenu" name="menuInbound">
+     <property name="title">
+      <string>Inbound</string>
+     </property>
+     <addaction name="actionCheck_Materials"/>
+     <addaction name="separator"/>
+    </widget>
+    <widget class="QMenu" name="menuOutbound_2">
+     <property name="title">
+      <string>Outbound</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionAudit_Materials_2"/>
+    </widget>
+    <addaction name="menuInbound"/>
+    <addaction name="menuOutbound_2"/>
+   </widget>
+   <widget class="QMenu" name="menuAUTOMATION">
+    <property name="title">
+     <string>AUTOMATION</string>
+    </property>
+    <widget class="QMenu" name="menuSAP">
+     <property name="title">
+      <string>SAP</string>
+     </property>
+     <addaction name="actionPrint_PDF"/>
+     <addaction name="actionCreate_Orders"/>
+    </widget>
+    <addaction name="menuSAP"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuOperation"/>
+   <addaction name="menuAUTOMATION"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionTELEFONICA">
+   <property name="text">
+    <string>TELEFONICA</string>
+   </property>
+  </action>
+  <action name="actionSAMSUNG">
+   <property name="text">
+    <string>SAMSUNG</string>
+   </property>
+  </action>
+  <action name="actionInbound">
+   <property name="text">
+    <string>Inbound</string>
+   </property>
+  </action>
+  <action name="actionInbound_2">
+   <property name="text">
+    <string>Inbound</string>
+   </property>
+  </action>
+  <action name="actionOutbound">
+   <property name="text">
+    <string>Outbound</string>
+   </property>
+  </action>
+  <action name="actionCheck_Materials">
+   <property name="text">
+    <string>Check Materials</string>
+   </property>
+  </action>
+  <action name="actionPrint_Docs_SAP">
+   <property name="text">
+    <string>Print Docs SAP</string>
+   </property>
+  </action>
+  <action name="actionCheck_Materials_2">
+   <property name="text">
+    <string>Check Materials</string>
+   </property>
+  </action>
+  <action name="actionSave_PDF_SAP">
+   <property name="text">
+    <string>Save PDF SAP</string>
+   </property>
+  </action>
+  <action name="actionAudit_Materials">
+   <property name="text">
+    <string>Audit Materials</string>
+   </property>
+  </action>
+  <action name="actionSave_PDF_SAP_2">
+   <property name="text">
+    <string>Save PDF SAP</string>
+   </property>
+  </action>
+  <action name="actionAudit_Materials_2">
+   <property name="text">
+    <string>Audit Materials</string>
+   </property>
+  </action>
+  <action name="actionPrint_PDF">
+   <property name="text">
+    <string>Print PDF</string>
+   </property>
+  </action>
+  <action name="actionCreate_Orders">
+   <property name="text">
+    <string>Create Orders</string>
+   </property>
+  </action>
+  <action name="actionOPERATION">
+   <property name="text">
+    <string>OPERATION</string>
+   </property>
+  </action>
+  <action name="actionAUTOMATION">
+   <property name="text">
+    <string>AUTOMATION</string>
+   </property>
+  </action>
+  <action name="actionREPORTS">
+   <property name="text">
+    <string>REPORTS</string>
+   </property>
+  </action>
+  <action name="actionLogin">
+   <property name="text">
+    <string>Login</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
