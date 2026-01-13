@@ -70,7 +70,12 @@ class Ui_MainWindow(object):
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
         self.frame.setStyleSheet(u"")
+<<<<<<< HEAD
         self.frame.setFrameShape(QFrame.NoFrame)
+=======
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
         self.verticalLayout_4 = QVBoxLayout(self.frame)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.Pages = QStackedWidget(self.frame)
@@ -255,6 +260,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_5)
 
+<<<<<<< HEAD
         self.tb_print = QTableWidget(self.page_savepdf)
         if (self.tb_print.columnCount() < 2):
             self.tb_print.setColumnCount(2)
@@ -265,6 +271,18 @@ class Ui_MainWindow(object):
         self.tb_print.setObjectName(u"tb_print")
 
         self.verticalLayout_2.addWidget(self.tb_print)
+=======
+        self.tableWidget_2 = QTableWidget(self.page_savepdf)
+        if (self.tableWidget_2.columnCount() < 2):
+            self.tableWidget_2.setColumnCount(2)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(0, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.tableWidget_2.setHorizontalHeaderItem(1, __qtablewidgetitem13)
+        self.tableWidget_2.setObjectName(u"tableWidget_2")
+
+        self.verticalLayout_2.addWidget(self.tableWidget_2)
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
 
         self.Pages.addWidget(self.page_savepdf)
 
@@ -276,7 +294,11 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
+<<<<<<< HEAD
         self.menubar.setGeometry(QRect(0, 0, 656, 22))
+=======
+        self.menubar.setGeometry(QRect(0, 0, 656, 33))
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
         self.menu = QMenu(self.menubar)
         self.menu.setObjectName(u"menu")
         icon = QIcon()
@@ -388,9 +410,15 @@ class Ui_MainWindow(object):
         self.btn_opendoc.setText(QCoreApplication.translate("MainWindow", u"Select File", None))
         self.txt_filedoc.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Excel File", None))
         self.btn_printdoc.setText(QCoreApplication.translate("MainWindow", u"Create Doc", None))
+<<<<<<< HEAD
         ___qtablewidgetitem12 = self.tb_print.horizontalHeaderItem(0)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"DOCUMENTO", None));
         ___qtablewidgetitem13 = self.tb_print.horizontalHeaderItem(1)
+=======
+        ___qtablewidgetitem12 = self.tableWidget_2.horizontalHeaderItem(0)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"DOCUMENTO", None));
+        ___qtablewidgetitem13 = self.tableWidget_2.horizontalHeaderItem(1)
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
         ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"ENTREGA", None));
         self.menu.setTitle(QCoreApplication.translate("MainWindow", u"MENU", None))
         self.menuOperation.setTitle(QCoreApplication.translate("MainWindow", u"OPERATION", None))

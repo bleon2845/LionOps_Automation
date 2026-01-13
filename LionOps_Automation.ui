@@ -21,7 +21,14 @@
        <string notr="true"/>
       </property>
       <property name="frameShape">
+<<<<<<< HEAD
        <enum>QFrame::NoFrame</enum>
+=======
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
@@ -41,7 +48,10 @@
                <property name="font">
                 <font>
                  <pointsize>16</pointsize>
+<<<<<<< HEAD
                  <weight>75</weight>
+=======
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
                  <italic>true</italic>
                  <bold>true</bold>
                 </font>
@@ -53,6 +63,12 @@
              </item>
              <item>
               <spacer name="horizontalSpacer">
+<<<<<<< HEAD
+=======
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
                <property name="sizeHint" stdset="0">
                 <size>
                  <width>20</width>
@@ -198,7 +214,10 @@
                <property name="font">
                 <font>
                  <pointsize>16</pointsize>
+<<<<<<< HEAD
                  <weight>75</weight>
+=======
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
                  <italic>true</italic>
                  <bold>true</bold>
                 </font>
@@ -210,6 +229,12 @@
              </item>
              <item>
               <spacer name="horizontalSpacer_2">
+<<<<<<< HEAD
+=======
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
                <property name="sizeHint" stdset="0">
                 <size>
                  <width>20</width>
@@ -299,7 +324,11 @@
             </layout>
            </item>
            <item>
+<<<<<<< HEAD
             <widget class="QTableWidget" name="tb_print">
+=======
+            <widget class="QTableWidget" name="tableWidget_2">
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
              <column>
               <property name="text">
                <string>DOCUMENTO</string>
@@ -327,7 +356,11 @@
      <x>0</x>
      <y>0</y>
      <width>656</width>
+<<<<<<< HEAD
      <height>22</height>
+=======
+     <height>33</height>
+>>>>>>> 3558c5d4d62faed85dba267238971b54e0b870af
     </rect>
    </property>
    <widget class="QMenu" name="menu">

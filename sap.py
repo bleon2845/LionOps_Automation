@@ -84,7 +84,6 @@ class SapGui():
 
         self.session = self.connection.Children(0)
         self.session.findById("wnd[0]").maximize()
-
     def login_sap(self, username, password, system_name=None, index=None):
         self.open_sap()
         time.sleep(2)
