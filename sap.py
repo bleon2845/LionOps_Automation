@@ -1,14 +1,11 @@
 import win32com.client
-import sys
 import subprocess
 import time
 import pandas as pd
 from tkinter import*
-from tkinter import messagebox
 import pyautogui
 import os
 import win32gui
-import win32con
 import threading
 from datetime import datetime
 import shutil
@@ -19,6 +16,7 @@ class SapGui():
         self.connection  = None
         self.session     = None
 
+    #----------- SAP Connection and Login -----------
     def open_sap(self):
 
         try:
@@ -84,6 +82,7 @@ class SapGui():
 
         self.session = self.connection.Children(0)
         self.session.findById("wnd[0]").maximize()
+
     def login_sap(self, username, password, system_name=None, index=None):
         self.open_sap()
         time.sleep(2)
@@ -239,7 +238,6 @@ class SapGui():
     #----------- Print documents from excel file ----------- 
     def save_pdf(self, full_path: str, timeout: float = 40.0):
         
-
         TARGET_CLASSES = {"#32770", "Xaml_WindowedPopupClass"}# Class names to look for
 
         def _find_file_dialog():
@@ -304,7 +302,7 @@ class SapGui():
         current_year = str(datetime.now().year)
 
         self.connect_sap() # Connect to SAP if not connected
-    
+
 
         for _, row in dataprint.iterrows():
 
@@ -398,15 +396,5 @@ class SapGui():
 
         return True
 
-
-
 if __name__ == "__main__":
-
     sap = SapGui()
-
-
-    #window = Tk() #Check this late
-    #window.geometry("200x60")
-    #btn = Button(window, text="Login SAP", command=lambda: SapGui().sapLogin())
-    #btn.pack()
-    #window.mainloop()
