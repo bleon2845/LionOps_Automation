@@ -1,32 +1,41 @@
-# 🦁 LionOps Automation
+# 🚀 LionOps Automation
 
-Desktop automation tool for SAP logistics processes using **Python + PySide6 + SAP GUI Scripting**.
+Enterprise-grade automation platform for SAP processes using Python, Qt (PySide6) and SAP GUI Scripting.
 
-## 🚀 Features
-- SAP Login automation
-- Purchase Order creation (ME21N)
-- PDF processing
-- Professional UI built with Qt Designer
-- Multi-page navigation with QAction menus
+---
 
-## 🛠️ Tech Stack
-- Python 3.10+
-- PySide6
-- SAP GUI Scripting
-- Pandas
-- Windows OS
+## 🎯 Purpose
 
-## 📸 Screenshots
-(Coming soon)
+LionOps Automation centralizes and automates operational SAP processes such as:
 
-## ⚠️ Requirements
-- SAP GUI installed
-- SAP GUI Scripting enabled
-- Windows environment
+- 📄 Printing SAP documents
+- 🧾 Creating SAP orders
+- 📂 Saving PDFs automatically
+- ⚙️ Future logistics & WMS automation modules
 
-## ▶️ How to Run
-```bash
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python main.py
+---
+
+## 🧱 Architecture Overview
+
+This project follows **Clean Architecture + Hexagonal principles**, ensuring:
+
+- Clear separation of concerns
+- Scalability
+- Safe SAP automation
+- Maintainability
+
+---
+
+## 🏗️ High-Level Architecture
+
+```mermaid
+flowchart TB
+    User[👤 User]
+    UI[🪟 Qt UI]
+    Controllers[🎮 Controllers]
+    Facade[🧱 SapFacade]
+    SAPIntegration[🔌 SAP Integration]
+    SAP[🏭 SAP System]
+
+    User --> UI --> Controllers --> Facade --> SAPIntegration --> SAP
+
