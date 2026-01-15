@@ -4,13 +4,17 @@ import pandas as pd
 import os
 import win32gui
 import win32con
-from sap import SapGui
+
 
 class SavePDFController(QObject):
     def __init__(self, main_window):
         self.main_window = main_window
         self.ui = main_window.ui
         self.sap = main_window.sap
+
+        self._df_print = None
+        self.file_path = None
+        self.file_path_doc = None
 
         self.connect_signals()
 
@@ -43,7 +47,7 @@ class SavePDFController(QObject):
         btn.setEnabled(False)
 
         try:
-            ok = self.sap.login_sap(username, password,system_name="EPA [ANDINA_COPA]")
+            ok = self.sap.login(username, password,system_name="EPA [ANDINA_COPA]")
             if ok:
                 QMessageBox.information(self.main_window, "SAP Login", "Login successfully.")
         except Exception as e:

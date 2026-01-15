@@ -1,9 +1,13 @@
 import sys
+
 from PySide6.QtWidgets import QApplication, QMainWindow
 from ui_main import Ui_MainWindow
-from sap import SapGui
+
 from modules.save_pdf import SavePDFController
 from modules.create_orders import CreateOrdersController
+
+from integrations.sap.sap_gui import SapGUI
+from integrations.sap.facade import SapFacade 
 
 
 class MainWindow(QMainWindow):
@@ -15,7 +19,8 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         # SAP instance
-        self.sap = SapGui()
+        self.sap_gui = SapGUI()
+        self.sap = SapFacade(self.sap_gui)
 
         # Modules
         self.save_pdf = SavePDFController(self)

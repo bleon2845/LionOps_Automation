@@ -2,9 +2,7 @@ from PySide6.QtWidgets import QMessageBox, QLineEdit, QFileDialog, QTableWidgetI
 from PySide6.QtCore import QObject
 import pandas as pd
 import os
-import win32gui
-import win32con
-from sap import SapGui
+
 
 class CreateOrdersController(QObject):
     def __init__(self, main_window):
@@ -41,7 +39,7 @@ class CreateOrdersController(QObject):
         btn.setEnabled(False)
 
         try:
-            ok = self.sap.login_sap(username, password,system_name="EPA [ANDINA_COPA]")
+            ok = self.sap.login(username, password,system_name="EPA [ANDINA_COPA]")
             if ok:
                 QMessageBox.information(self.main_window, "SAP Login", "Login successfully.")
         except Exception as e:
@@ -120,7 +118,7 @@ class CreateOrdersController(QObject):
 
             try:
                 self.main_window.showMinimized()
-                self.sap.create_documents(self.ui.txt_filecreation.text(), file_folder)# Send file path and pdf folder to create_documents
+                self.sap.create_orders(self.ui.txt_filecreation.text(), file_folder)# Send file path and pdf folder to create_documents
                 msg = QMessageBox(self.main_window)
                 msg.setWindowTitle("Creation")
                 msg.setIcon(QMessageBox.Information)
