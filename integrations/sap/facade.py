@@ -7,7 +7,7 @@ class SapFacade:
     def __init__(self, sap_gui: SapGUI):
         self.sap = sap_gui
         self._create_order: CreateOrder | None = None
-        self._save_docs: SaveDocs | None = None
+        self._save_docs_service: SaveDocs | None = None
 
     #------------ Connection and Login -------------
     def _ensure_session(self, system_name: str = None,index: int = None):
@@ -38,25 +38,26 @@ class SapFacade:
         if not self._create_order:
             self._create_order = CreateOrder(self.sap.session)
 
-        self._create_order.create_documents(excel_path)
+        self._create_order.create_documents(excel_path, file_folder)
 
     #------------ Save PDF MB02 SP01------------- 
     def print_documents(self, excel_path: str, output_folder: str):
         self._ensure_session()
 
         if not self._save_docs_service:
-            raise RuntimeError("SaveDocs service not initialized.")
+            self._save_docs_service = SaveDocs(self.sap.session)
+            #raise RuntimeError("SaveDocs service not initialized.")
 
         self._save_docs_service.print_documents(excel_path, output_folder)
 
     #------------ Create Identity Document -------------
-    def save_docs(self, df_print, output_folder):
+    def save_docs(self, df_print, output_folder, pdf_base_path):
         self._ensure_session()
         
         if not self._save_docs_service:
-            raise RuntimeError("SaveDocs service not initialized.")
+            self._save_docs_service = SaveDocs(self.sap.session)
         
-        self.save_docs_service.save_docs(df_print, output_folder)
+        self._save_docs_service.save_docs(df_print, output_folder, pdf_base_path)
 
 
 

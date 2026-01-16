@@ -201,7 +201,7 @@ class SavePDFController(QObject):
 
             try:
                 self.main_window.showMinimized()
-                self.sap.save_docs(self._df_print, pdf_folder)
+                self.sap.save_docs(self._df_print, pdf_folder, self.file_path_doc)
                 msg = QMessageBox(self.main_window)
                 msg.setWindowTitle("Print")
                 msg.setIcon(QMessageBox.Information)

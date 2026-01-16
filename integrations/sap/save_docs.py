@@ -151,11 +151,8 @@ class SaveDocs():
             self.session.findById("wnd[0]/tbar[0]/btn[3]").press()
 
     #---------- Print documents of identity ----------------
-    def save_docs(self, df_print, output_folder):
-        # Verificar PDF
-
-        pdf_base = getattr(self, "file_path_doc", None)
-
+    def save_docs(self, df_print, output_folder, pdf_base):
+    
         if not pdf_base or not os.path.isfile(pdf_base):
             raise FileNotFoundError("select a PDF correct")
 
