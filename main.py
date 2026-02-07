@@ -35,6 +35,7 @@ class MainWindow(QMainWindow):
     def _connect_navigation(self):
         self.ui.actionPrint_PDF.triggered.connect(lambda: self.ui.Pages.setCurrentWidget(self.ui.page_savepdf))
         self.ui.actionCreate_Orders.triggered.connect(lambda: self.ui.Pages.setCurrentWidget(self.ui.page_createorders))
+        self.ui.actionCreate_Orders_MB21.triggered.connect(lambda: self.ui.Pages.setCurrentWidget(self.ui.page_createMb21))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

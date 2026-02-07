@@ -10,12 +10,12 @@ class CreateOrdersControllerMB21(QObject):
         self.ui = main_window.ui
         self.sap = main_window.sap
 
-        self.connect_signals()
+        self.connect_signalsMB21()
 
     #--------------- Button Page ------------------#
-    def connect_signals(self):
-        self.ui.btn_openMB21.clicked.connect(self.open_filecreation) # button to open file dialog
-        self.ui.btn_creationMB21.clicked.connect(self.creation_clicked) # button for creation of documents
+    def connect_signalsMB21(self):
+        self.ui.btn_openMb21.clicked.connect(self.open_filecreationMB21) # button to open file dialog
+        self.ui.btn_creationMb21.clicked.connect(self.creation_clickedMB21) # button for creation of documents
 
     #------------------- Get Line Edit Text ------------------#
     def _get_line_text(self, name: str) -> str: #Obtener nombres de lineEdit en gui
@@ -63,7 +63,7 @@ class CreateOrdersControllerMB21(QObject):
             return
 
         self.file_path_creation = file_path_creation
-        self.ui.txt_filecreationMB21.setText(file_path_creation)
+        self.ui.txt_filecreationMb21.setText(file_path_creation)
         self.load_excel_creationMB21(file_path_creation, sheet_name='Creation')
 
     def load_excel_creationMB21(self, file_path_creation: str, sheet_name: str='Creation'):
@@ -81,7 +81,7 @@ class CreateOrdersControllerMB21(QObject):
 
         df = df.fillna("") #Clean NaN values
 
-        tbl = self.ui.tb_creationMB21 # o self.ui.tableWidget
+        tbl = self.ui.tb_creationMb21 # o self.ui.tableWidget
         tbl.setSortingEnabled(False)
         tbl.clearContents()
         tbl.setRowCount(len(df))
@@ -117,7 +117,7 @@ class CreateOrdersControllerMB21(QObject):
 
             try:
                 self.main_window.showMinimized()
-                self.sap.create_ordersMB21(self.ui.txt_filecreationMB21.text(), file_folder)# Send file path and pdf folder to create_documents
+                self.sap.create_orders_MB21(self.ui.txt_filecreationMb21.text(), file_folder)# Send file path and pdf folder to create_documents
                 msg = QMessageBox(self.main_window)
                 msg.setWindowTitle("Creation")
                 msg.setIcon(QMessageBox.Information)
