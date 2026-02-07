@@ -1,6 +1,7 @@
 import sys
 
 from PySide6.QtWidgets import QApplication, QMainWindow
+from modules.create_orders_MB21 import CreateOrdersControllerMB21
 from ui_main import Ui_MainWindow
 
 from modules.save_pdf import SavePDFController
@@ -25,6 +26,7 @@ class MainWindow(QMainWindow):
         # Modules
         self.save_pdf = SavePDFController(self)
         self.create_orders = CreateOrdersController(self)
+        self.create_orders_MB21 = CreateOrdersControllerMB21(self)
 
         # Connections
         self._connect_navigation()

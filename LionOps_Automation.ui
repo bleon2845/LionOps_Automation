@@ -53,9 +53,12 @@
              </item>
              <item>
               <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>20</width>
+                 <width>40</width>
                  <height>20</height>
                 </size>
                </property>
@@ -189,6 +192,129 @@
            </item>
           </layout>
          </widget>
+         <widget class="QWidget" name="page_createMb21">
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="CreateOrdersMb21">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <italic>true</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>CREATE ORDERS / TRANSACTION MB21</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QPushButton" name="btn_openMb21">
+               <property name="text">
+                <string>Select File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="txt_filecreationMb21">
+               <property name="placeholderText">
+                <string>Select Excel File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_creationMb21">
+               <property name="text">
+                <string>Create Orders</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tb_creationMb21">
+             <column>
+              <property name="text">
+               <string>INDICE</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>PEDIDO</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>ENTREGA</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>PROYECTO</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>MATERIAL</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>CANTIDAD</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>FECHA</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>CENTRO</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>ALM.DEST</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>LOTE</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>OT</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>BODEGA</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>PEP</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>CLASE DE MOV</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>GUARDAR</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
          <widget class="QWidget" name="page_savepdf">
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
@@ -210,9 +336,12 @@
              </item>
              <item>
               <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
                <property name="sizeHint" stdset="0">
                 <size>
-                 <width>20</width>
+                 <width>40</width>
                  <height>20</height>
                 </size>
                </property>
@@ -373,6 +502,7 @@
      </property>
      <addaction name="actionPrint_PDF"/>
      <addaction name="actionCreate_Orders"/>
+     <addaction name="actionCreate_Orders_MB21"/>
     </widget>
     <addaction name="menuSAP"/>
    </widget>
@@ -459,7 +589,7 @@
   </action>
   <action name="actionCreate_Orders">
    <property name="text">
-    <string>Create Orders</string>
+    <string>Create Orders (ME21N)</string>
    </property>
   </action>
   <action name="actionOPERATION">
@@ -480,6 +610,11 @@
   <action name="actionLogin">
    <property name="text">
     <string>Login</string>
+   </property>
+  </action>
+  <action name="actionCreate_Orders_MB21">
+   <property name="text">
+    <string>Create Orders (MB21)</string>
    </property>
   </action>
  </widget>

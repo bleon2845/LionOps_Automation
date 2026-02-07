@@ -63,6 +63,8 @@ class Ui_MainWindow(object):
         self.actionREPORTS.setObjectName(u"actionREPORTS")
         self.actionLogin = QAction(MainWindow)
         self.actionLogin.setObjectName(u"actionLogin")
+        self.actionCreate_Orders_MB21 = QAction(MainWindow)
+        self.actionCreate_Orders_MB21.setObjectName(u"actionCreate_Orders_MB21")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -92,7 +94,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addWidget(self.CreateOrders)
 
-        self.horizontalSpacer = QSpacerItem(20, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
@@ -176,6 +178,74 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.tb_creation)
 
         self.Pages.addWidget(self.page_createorders)
+        self.page_createMb21 = QWidget()
+        self.page_createMb21.setObjectName(u"page_createMb21")
+        self.verticalLayout_5 = QVBoxLayout(self.page_createMb21)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.CreateOrdersMb21 = QLabel(self.page_createMb21)
+        self.CreateOrdersMb21.setObjectName(u"CreateOrdersMb21")
+        self.CreateOrdersMb21.setFont(font)
+
+        self.verticalLayout_5.addWidget(self.CreateOrdersMb21)
+
+        self.horizontalLayout_6 = QHBoxLayout()
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.btn_openMb21 = QPushButton(self.page_createMb21)
+        self.btn_openMb21.setObjectName(u"btn_openMb21")
+
+        self.horizontalLayout_6.addWidget(self.btn_openMb21)
+
+        self.txt_filecreationMb21 = QLineEdit(self.page_createMb21)
+        self.txt_filecreationMb21.setObjectName(u"txt_filecreationMb21")
+
+        self.horizontalLayout_6.addWidget(self.txt_filecreationMb21)
+
+        self.btn_creationMb21 = QPushButton(self.page_createMb21)
+        self.btn_creationMb21.setObjectName(u"btn_creationMb21")
+
+        self.horizontalLayout_6.addWidget(self.btn_creationMb21)
+
+
+        self.verticalLayout_5.addLayout(self.horizontalLayout_6)
+
+        self.tb_creationMb21 = QTableWidget(self.page_createMb21)
+        if (self.tb_creationMb21.columnCount() < 15):
+            self.tb_creationMb21.setColumnCount(15)
+        __qtablewidgetitem12 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(0, __qtablewidgetitem12)
+        __qtablewidgetitem13 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(1, __qtablewidgetitem13)
+        __qtablewidgetitem14 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(2, __qtablewidgetitem14)
+        __qtablewidgetitem15 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(3, __qtablewidgetitem15)
+        __qtablewidgetitem16 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(4, __qtablewidgetitem16)
+        __qtablewidgetitem17 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(5, __qtablewidgetitem17)
+        __qtablewidgetitem18 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(6, __qtablewidgetitem18)
+        __qtablewidgetitem19 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(7, __qtablewidgetitem19)
+        __qtablewidgetitem20 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(8, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(9, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(10, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(11, __qtablewidgetitem23)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(12, __qtablewidgetitem24)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(13, __qtablewidgetitem25)
+        __qtablewidgetitem26 = QTableWidgetItem()
+        self.tb_creationMb21.setHorizontalHeaderItem(14, __qtablewidgetitem26)
+        self.tb_creationMb21.setObjectName(u"tb_creationMb21")
+
+        self.verticalLayout_5.addWidget(self.tb_creationMb21)
+
+        self.Pages.addWidget(self.page_createMb21)
         self.page_savepdf = QWidget()
         self.page_savepdf.setObjectName(u"page_savepdf")
         self.verticalLayout_2 = QVBoxLayout(self.page_savepdf)
@@ -188,7 +258,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_3.addWidget(self.SavePDF)
 
-        self.horizontalSpacer_2 = QSpacerItem(20, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
 
@@ -258,10 +328,10 @@ class Ui_MainWindow(object):
         self.tb_print = QTableWidget(self.page_savepdf)
         if (self.tb_print.columnCount() < 2):
             self.tb_print.setColumnCount(2)
-        __qtablewidgetitem12 = QTableWidgetItem()
-        self.tb_print.setHorizontalHeaderItem(0, __qtablewidgetitem12)
-        __qtablewidgetitem13 = QTableWidgetItem()
-        self.tb_print.setHorizontalHeaderItem(1, __qtablewidgetitem13)
+        __qtablewidgetitem27 = QTableWidgetItem()
+        self.tb_print.setHorizontalHeaderItem(0, __qtablewidgetitem27)
+        __qtablewidgetitem28 = QTableWidgetItem()
+        self.tb_print.setHorizontalHeaderItem(1, __qtablewidgetitem28)
         self.tb_print.setObjectName(u"tb_print")
 
         self.verticalLayout_2.addWidget(self.tb_print)
@@ -315,6 +385,7 @@ class Ui_MainWindow(object):
         self.menuAUTOMATION.addAction(self.menuSAP.menuAction())
         self.menuSAP.addAction(self.actionPrint_PDF)
         self.menuSAP.addAction(self.actionCreate_Orders)
+        self.menuSAP.addAction(self.actionCreate_Orders_MB21)
 
         self.retranslateUi(MainWindow)
 
@@ -339,11 +410,12 @@ class Ui_MainWindow(object):
         self.actionSave_PDF_SAP_2.setText(QCoreApplication.translate("MainWindow", u"Save PDF SAP", None))
         self.actionAudit_Materials_2.setText(QCoreApplication.translate("MainWindow", u"Audit Materials", None))
         self.actionPrint_PDF.setText(QCoreApplication.translate("MainWindow", u"Print PDF", None))
-        self.actionCreate_Orders.setText(QCoreApplication.translate("MainWindow", u"Create Orders", None))
+        self.actionCreate_Orders.setText(QCoreApplication.translate("MainWindow", u"Create Orders (ME21N)", None))
         self.actionOPERATION.setText(QCoreApplication.translate("MainWindow", u"OPERATION", None))
         self.actionAUTOMATION.setText(QCoreApplication.translate("MainWindow", u"AUTOMATION", None))
         self.actionREPORTS.setText(QCoreApplication.translate("MainWindow", u"REPORTS", None))
         self.actionLogin.setText(QCoreApplication.translate("MainWindow", u"Login", None))
+        self.actionCreate_Orders_MB21.setText(QCoreApplication.translate("MainWindow", u"Create Orders (MB21)", None))
         self.CreateOrders.setText(QCoreApplication.translate("MainWindow", u"CREATE ORDERS", None))
         self.Login.setText(QCoreApplication.translate("MainWindow", u"Login", None))
         self.user_create.setPlaceholderText(QCoreApplication.translate("MainWindow", u"User", None))
@@ -377,6 +449,40 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"OT", None));
         ___qtablewidgetitem11 = self.tb_creation.horizontalHeaderItem(11)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"GUARDAR", None));
+        self.CreateOrdersMb21.setText(QCoreApplication.translate("MainWindow", u"CREATE ORDERS / TRANSACTION MB21", None))
+        self.btn_openMb21.setText(QCoreApplication.translate("MainWindow", u"Select File", None))
+        self.txt_filecreationMb21.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Excel File", None))
+        self.btn_creationMb21.setText(QCoreApplication.translate("MainWindow", u"Create Orders", None))
+        ___qtablewidgetitem12 = self.tb_creationMb21.horizontalHeaderItem(0)
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"INDICE", None));
+        ___qtablewidgetitem13 = self.tb_creationMb21.horizontalHeaderItem(1)
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"PEDIDO", None));
+        ___qtablewidgetitem14 = self.tb_creationMb21.horizontalHeaderItem(2)
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"ENTREGA", None));
+        ___qtablewidgetitem15 = self.tb_creationMb21.horizontalHeaderItem(3)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"PROYECTO", None));
+        ___qtablewidgetitem16 = self.tb_creationMb21.horizontalHeaderItem(4)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"MATERIAL", None));
+        ___qtablewidgetitem17 = self.tb_creationMb21.horizontalHeaderItem(5)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"CANTIDAD", None));
+        ___qtablewidgetitem18 = self.tb_creationMb21.horizontalHeaderItem(6)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"FECHA", None));
+        ___qtablewidgetitem19 = self.tb_creationMb21.horizontalHeaderItem(7)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"CENTRO", None));
+        ___qtablewidgetitem20 = self.tb_creationMb21.horizontalHeaderItem(8)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"ALM.DEST", None));
+        ___qtablewidgetitem21 = self.tb_creationMb21.horizontalHeaderItem(9)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"LOTE", None));
+        ___qtablewidgetitem22 = self.tb_creationMb21.horizontalHeaderItem(10)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"OT", None));
+        ___qtablewidgetitem23 = self.tb_creationMb21.horizontalHeaderItem(11)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"BODEGA", None));
+        ___qtablewidgetitem24 = self.tb_creationMb21.horizontalHeaderItem(12)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"PEP", None));
+        ___qtablewidgetitem25 = self.tb_creationMb21.horizontalHeaderItem(13)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"CLASE DE MOV", None));
+        ___qtablewidgetitem26 = self.tb_creationMb21.horizontalHeaderItem(14)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"GUARDAR", None));
         self.SavePDF.setText(QCoreApplication.translate("MainWindow", u"SAVE PDF", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Login", None))
         self.user_save.setPlaceholderText(QCoreApplication.translate("MainWindow", u"User", None))
@@ -388,10 +494,10 @@ class Ui_MainWindow(object):
         self.btn_opendoc.setText(QCoreApplication.translate("MainWindow", u"Select File", None))
         self.txt_filedoc.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Select Excel File", None))
         self.btn_printdoc.setText(QCoreApplication.translate("MainWindow", u"Create Doc", None))
-        ___qtablewidgetitem12 = self.tb_print.horizontalHeaderItem(0)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"DOCUMENTO", None));
-        ___qtablewidgetitem13 = self.tb_print.horizontalHeaderItem(1)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"ENTREGA", None));
+        ___qtablewidgetitem27 = self.tb_print.horizontalHeaderItem(0)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"DOCUMENTO", None));
+        ___qtablewidgetitem28 = self.tb_print.horizontalHeaderItem(1)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"ENTREGA", None));
         self.menu.setTitle(QCoreApplication.translate("MainWindow", u"MENU", None))
         self.menuOperation.setTitle(QCoreApplication.translate("MainWindow", u"OPERATION", None))
         self.menuInbound.setTitle(QCoreApplication.translate("MainWindow", u"Inbound", None))

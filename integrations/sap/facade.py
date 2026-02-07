@@ -1,3 +1,4 @@
+from integrations.sap.create_order_MB21 import CreateOrderMB21
 from integrations.sap.sap_gui import SapGUI
 from integrations.sap.create_order import CreateOrder
 from integrations.sap.save_docs import SaveDocs
@@ -37,6 +38,14 @@ class SapFacade:
         self._ensure_session()
         if not self._create_order:
             self._create_order = CreateOrder(self.sap.session)
+
+        self._create_order.create_documents(excel_path, file_folder)
+
+    #------------ Create Order MB21 -------------
+    def create_orders_MB21(self, excel_path: str, file_folder: str):
+        self._ensure_session()
+        if not self._create_order:
+            self._create_order = CreateOrderMB21(self.sap.session)
 
         self._create_order.create_documents(excel_path, file_folder)
 

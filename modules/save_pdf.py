@@ -5,7 +5,6 @@ import os
 import win32gui
 import win32con
 
-
 class SavePDFController(QObject):
     def __init__(self, main_window):
         self.main_window = main_window

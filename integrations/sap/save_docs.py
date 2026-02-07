@@ -7,6 +7,8 @@ import threading
 from datetime import datetime
 import shutil
 
+from integrations.sap import session
+
 
 
 class SaveDocs():
@@ -88,9 +90,22 @@ class SaveDocs():
             self.session.findById("wnd[0]/usr/txtRM07M-MJAHR").setFocus()
             self.session.findById("wnd[0]/usr/txtRM07M-MJAHR").caretPosition = 4
             self.session.findById("wnd[0]").sendVKey (0)
-            self.session.findById("wnd[0]/usr/sub:SAPMM07M:0420/txtMSEG-ERFMG[0,5]").setFocus()
-            self.session.findById("wnd[0]/usr/sub:SAPMM07M:0420/txtMSEG-ERFMG[0,5]").caretPosition = 3
-            self.session.findById("wnd[0]").sendVKey (2)
+
+            #--------------- TRY INBOUND, ELSE OUTBOUND ---------------#
+            try:
+                # INBOUND
+                field_in = self.session.findById("wnd[0]/usr/sub:SAPMM07M:0221/txtMSEG-ERFMG[0,7]")
+                field_in.setFocus()
+                field_in.caretPosition = 5
+                self.session.findById("wnd[0]").sendVKey(2)
+
+            except Exception:
+                # OUTBOUND
+                field_out = self.session.findById("wnd[0]/usr/sub:SAPMM07M:0420/txtMSEG-ERFMG[0,5]")
+                field_out.setFocus()
+                field_out.caretPosition = 3
+                self.session.findById("wnd[0]").sendVKey(2)
+
             self.session.findById("wnd[0]/tbar[1]/btn[14]").press()
             self.session.findById("wnd[0]/usr/tblSAPDV70ATC_NAST3/ctxtDNAST-KSCHL[1,7]").text = "CF07"
             self.session.findById("wnd[0]/usr/tblSAPDV70ATC_NAST3/ctxtNAST-SPRAS[2,7]").text = "ES"
@@ -101,7 +116,7 @@ class SaveDocs():
             self.session.findById("wnd[0]/usr/cmbNAST-VSZTP").key = "4"
             self.session.findById("wnd[0]/tbar[0]/btn[3]").press()
             self.session.findById("wnd[0]/tbar[1]/btn[2]").press()
-            #self.session.findById("wnd[0]/usr/chkNAST-DIMME").selected = True #Flag to print immediately
+            ##self.session.findById("wnd[0]/usr/chkNAST-DIMME").selected = True #Flag to print immediately
             self.session.findById("wnd[0]/usr/ctxtNAST-LDEST").text = "LP01"
             self.session.findById("wnd[0]/usr/txtNAST-ANZAL").text = "1"
             self.session.findById("wnd[0]/usr/cmbNAST-TDOCOVER").key = "D"
