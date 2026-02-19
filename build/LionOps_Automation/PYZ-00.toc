@@ -770,6 +770,10 @@
    'C:\\Users\\bleonpar\\OneDrive - '
    'DPDHL\\Desktop\\LionOps_Automation\\integrations\\sap\\create_order.py',
    'PYMODULE'),
+  ('integrations.sap.create_order_MB21',
+   'C:\\Users\\bleonpar\\OneDrive - '
+   'DPDHL\\Desktop\\LionOps_Automation\\integrations\\sap\\create_order_MB21.py',
+   'PYMODULE'),
   ('integrations.sap.facade',
    'C:\\Users\\bleonpar\\OneDrive - '
    'DPDHL\\Desktop\\LionOps_Automation\\integrations\\sap\\facade.py',
@@ -805,6 +809,10 @@
   ('modules.create_orders',
    'C:\\Users\\bleonpar\\OneDrive - '
    'DPDHL\\Desktop\\LionOps_Automation\\modules\\create_orders.py',
+   'PYMODULE'),
+  ('modules.create_orders_MB21',
+   'C:\\Users\\bleonpar\\OneDrive - '
+   'DPDHL\\Desktop\\LionOps_Automation\\modules\\create_orders_MB21.py',
    'PYMODULE'),
   ('modules.save_pdf',
    'C:\\Users\\bleonpar\\OneDrive - '

@@ -98,6 +98,7 @@ class SaveDocs():
                 field_in.setFocus()
                 field_in.caretPosition = 5
                 self.session.findById("wnd[0]").sendVKey(2)
+                typeOperation = "CF06"
 
             except Exception:
                 # OUTBOUND
@@ -105,9 +106,10 @@ class SaveDocs():
                 field_out.setFocus()
                 field_out.caretPosition = 3
                 self.session.findById("wnd[0]").sendVKey(2)
+                typeOperation = "CF07"
 
             self.session.findById("wnd[0]/tbar[1]/btn[14]").press()
-            self.session.findById("wnd[0]/usr/tblSAPDV70ATC_NAST3/ctxtDNAST-KSCHL[1,7]").text = "CF07"
+            self.session.findById("wnd[0]/usr/tblSAPDV70ATC_NAST3/ctxtDNAST-KSCHL[1,7]").text = typeOperation
             self.session.findById("wnd[0]/usr/tblSAPDV70ATC_NAST3/ctxtNAST-SPRAS[2,7]").text = "ES"
             self.session.findById("wnd[0]/usr/tblSAPDV70ATC_NAST3/ctxtNAST-SPRAS[2,7]").setFocus()
             self.session.findById("wnd[0]/usr/tblSAPDV70ATC_NAST3/ctxtNAST-SPRAS[2,7]").caretPosition = 2
